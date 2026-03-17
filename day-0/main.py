@@ -50,28 +50,28 @@ for i in range(5):
 # Print all scores, the average, AND the grade
 
 # Hint: You'll need loops, conditionals (if/else), and basic math
-# z=[]
-# for i in range (5):
-#     a = int(input('insert the marks: '))
-#     z.append(a)
-# c=int(sum(z))
-# print(c)
-# b=c/5
-# print(b)
+z=[]
+for i in range (5):
+    a = int(input('insert the marks: '))
+    z.append(a)
+c=int(sum(z))
+print(c)
+b=c/5
+print(b)
 
-# if b>=90:
-#         print("A+")
-# elif b>=80:
-#         print("A")
-# elif b>=70: 
-#         print("B+")
-# elif b>=60:
-#         print("B")
-# elif b>=50:
-#         print("C+")
-# elif b>=35:
-#         print("C")
-# else :
-#         print("F")
+if b>=90:
+        print("A+")
+elif b>=80:
+        print("A")
+elif b>=70: 
+        print("B+")
+elif b>=60:
+        print("B")
+elif b>=50:
+        print("C+")
+elif b>=35:
+        print("C")
+else :
+        print("F")
 
-# print(z)
+print(z)
