@@ -1,0 +1,89 @@
+# Day 1 Task Then
+# Build something new. A TODO list app.
+# Here's what it needs to do:
+# 
+# User can add tasks
+# User can view all tasks
+# User can mark a task as done
+# User can remove a task
+# 
+# Keep it simple—just command-line for now. No fancy UI.
+# 
+# Think Through This First
+# Before you code, ask yourself:
+# 
+# How do you store multiple tasks? (Hint: yesterday you learned about lists)
+# # How do you let the user pick what to do? (Add? View? Remove?)
+# # How do you know which task to remove? (By number? By name?)
+# # When should the program stop? (When user types "quit"? Forever loop?)
+
+# # Map it out mentally. Then start coding.
+
+---------------------------------------------------------------------------------------------------
+# 
+# # Question 1: Index Numbers
+# # You're on the right track. Yes, you need to convert user input to an index number.
+# # Think about this:
+# # 
+# # If user says "remove task #2", what index in the list is that?
+# Lists start at index 0, right? So task #1 = index 0, task #2 = index 1
+# How would you do that math?
+# 
+# 
+# Question 2: Name or Number
+# You can make it work either way, but start simple first.
+# Pick ONE approach:
+# 
+# Number approach: Show list with numbers, user picks a number, you convert to index, remove it
+# Name approach: User types the task name, you find it in the list, remove it
+# 
+# Which feels easier to you right now?
+# 
+# Question 3: The Remove Function
+# You got it right—remove() IS the function. But here's the thing:
+# remove() needs the actual value, not the index.
+# So:
+# 
+# to.remove("buy milk") ✅ Works (you're removing the value)
+# to.remove(2) ❌ Doesn't work how you want (you're trying to remove by index)
+# 
+# If you want to remove by index, there's a different function. Google python remove by index and see what pops up.
+# ---------------------------------------------------------------------------------------------------
+Next Steps
+# Don't code yet. Think through:
+# 
+# How would you add a task to a dictionary instead of a list?
+# 
+# list.append() adds to a list
+# What adds to a dictionary?
+# 
+# 
+# How would you check if a task is done?
+# 
+# to["hello"] gives you what?
+# 
+# 
+# How would you mark a task as done?
+# 
+# How do you change a value in a dictionary?
+# 
+# 
+# How would you print it nicely?
+# 
+# Loop through and show each task + its status
+
+
+
+-----------------------------------------------------------------------
+
+
+# Today's Code Task-2
+# Build a simple dictionary practice script:
+
+# Create a dictionary with 3 tasks and their done status (True/False)
+# Print all tasks with their status
+# Let user pick a task number and mark it done
+# Print updated list
+
+# Keep it dumb simple. Don't overthink it.
+# Just code it. Break it. Fix it. That's the move.
