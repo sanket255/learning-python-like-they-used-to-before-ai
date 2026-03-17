@@ -19,12 +19,7 @@ elif view!="y":
       print("okay, your to-do list is super-private.just trust us")
 # -------------------------------------------------------------------------------------------
 # this part removes the tasks from the task and status lists 
-# rm=input('do you want to remove any tasks? (y/n?):' )
-# norm= input("spell the task you want to remove:" )
-# if rm=="y":
-    #   del lot[norm]
-# elif rm!="y":
-#     #   print('keep all the tasks and never get them done!!!!')
+
 # print(lot)
 # pot=dict(zip(task ,status)) # post operational task = 'pot' 
 
