@@ -35,10 +35,10 @@ else: (print(a/b))
 
 # print('temprature converter')
 
-# for i in range(5): 
-#     a=int(input("insert the temprature1:" ))
-#     b=((a*9/5)+32)
-#     print(b)
+for i in range(5): 
+    a=int(input("insert the temprature1:" ))
+    b=((a*9/5)+32)
+    print(b)
     
     
 # Hard Challenge
