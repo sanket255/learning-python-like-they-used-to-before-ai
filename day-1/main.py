@@ -12,11 +12,11 @@ for i in range(total_tasks):   # loop that process the transfer of the user inpu
 lot=dict(zip(task, status)) # list of tasks = 'lot'
 # -------------------------------------------------------------------------------------------------
 #this part of the code works to view the dictionary of the tasks with their status 
-# view=input("view the list of the tasks! (y/n?):" )
-# if view=="y":
-#         print(lot)
-# elif view!="y":
-#       print("okay, your to-do list is super-private.just trust us")
+view=input("view the list of the tasks! (y/n?):" )
+if view=="y":
+        print(lot)
+elif view!="y":
+      print("okay, your to-do list is super-private.just trust us")
 # -------------------------------------------------------------------------------------------
 # this part removes the tasks from the task and status lists 
 # rm=input('do you want to remove any tasks? (y/n?):' )
