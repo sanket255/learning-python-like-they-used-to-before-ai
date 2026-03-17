@@ -9,7 +9,7 @@ for i in range(total_tasks):   # loop that process the transfer of the user inpu
     task.append(user_task)
     task_status=input("what the status of the task? (done/in progress/pending):" )
     status.append(task_status)# this line converts the task and status lists into tepmorary tuple to put it in dictionary format using zip function
-# lot=dict(zip(task, status)) # list of tasks = 'lot'
+lot=dict(zip(task, status)) # list of tasks = 'lot'
 # -------------------------------------------------------------------------------------------------
 #this part of the code works to view the dictionary of the tasks with their status 
 # view=input("view the list of the tasks! (y/n?):" )
