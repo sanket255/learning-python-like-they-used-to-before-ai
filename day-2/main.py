@@ -22,7 +22,7 @@ while guess!=numgen:
         print("why so gloomy its not like we are asking to score your appereance here:" )
     # 
 # 
-# print(guess_list,guess_taken)
+print(guess_list,guess_taken)
 # 
 
 
