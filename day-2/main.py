@@ -28,19 +28,19 @@ print(guess_list,guess_taken)
 
 
 # same problem solved using for loop 
-# guess_list=[]
+guess_list=[]
 
-# for guess in range(numgen):
-#     guess=int(input("guess the number from 1-100:" ))
-#     guess_list.append(guess)
-#     if guess==numgen:
-#         print(f'{guess} {"good boiii why dont you try counting card next time"}')
-#     elif  guess>=numgen:
-#         print("too optimistic low the bar a bit:" )
-#     elif guess<=numgen:
-#         print("why so gloomy its not like we are asking to score your appereance here:" )
+for guess in range(numgen):
+    guess=int(input("guess the number from 1-100:" ))
+    guess_list.append(guess)
+    if guess==numgen:
+        print(f'{guess} {"good boiii why dont you try counting card next time"}')
+    elif  guess>=numgen:
+        print("too optimistic low the bar a bit:" )
+    elif guess<=numgen:
+        print("why so gloomy its not like we are asking to score your appereance here:" )
 
-# print(f'{guess_list}, "your attempts lokey you suck..."')
+print(f'{guess_list}, "your attempts lokey you suck..."')
 
 
 
