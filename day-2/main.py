@@ -49,24 +49,3 @@ print(f'{guess_list}, "your attempts lokey you suck..."')
 
 
 
-# print("smart calculatior")
-
-# number1=0
-# number2=0
-
-# while number2==number1:
-#     number1=int(input("input the number 1:" ))
-#     number2-int(input("input the number 2:" ))
-#     op=input("what aperationyou wanna do ( +, -, *, / ):" )
-#     if op == '+':
-#         print(number1+number2)
-#     elif op == '-':
-#         print(number1-number2)
-#     elif op == '*':
-#         print(number1*number2)
-#     elif op == "/":
-#         print(number1/number2)
-
-#     ask=input("do you want to do another calculation? (y/quit): ")
-#     # if ask=="y":
-#     #     print
