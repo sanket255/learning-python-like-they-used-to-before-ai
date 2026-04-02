@@ -21,17 +21,17 @@ def read():
 
 
 # 3. Main code - asks user to save or read
-# def main():
-#     while date != "quit":
+def main():
+    while date != "quit":
         
-#         queue =input("you wanna naot the note: ")
-#         if date == "y":
-#             write()
+        queue =input("you wanna naot the note: ")
+        if date == "y":
+            write()
             
-#         date = input("do you wanna read the note?")
-#         if date == "y":
-#             read()
-#         date=input("do you wanna save another note or wanna quit (y/quit)")
+        date = input("do you wanna read the note?")
+        if date == "y":
+            read()
+        date=input("do you wanna save another note or wanna quit (y/quit)")
         
 
 
