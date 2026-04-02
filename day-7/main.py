@@ -2,7 +2,7 @@
 print ("function infused file I/O")
 
 
-date=(input("(Insert the date): "))
+# date=(input("(Insert the date): "))
 # queue =input("enter:")
 
 # note=input("write a note to remind yourself who you were today: ")
@@ -19,21 +19,22 @@ def read():
     with open ("note.txt", "r") as file:
          print(file.read())
 
-
+# read()
 # 3. Main code - asks user to save or read
 def main():
-    while date != "quit":
-        
-        queue =input("you wanna naot the note: ")
-        if date == "y":
+    
+    ask=0
+    while ask !="quit":
+        ask=input("what do you want to do with your note write(w)or save(s) / read(r) / quit the programme: ")
+        if ask =="s" or "w":
             write()
-            
-        date = input("do you wanna read the note?")
-        if date == "y":
+        elif ask=="r":
             read()
-        date=input("do you wanna save another note or wanna quit (y/quit)")
-        
+        elif ask=="quit":
+            break
+        ask=input("Do you want add anothe note or quit the programme? (y/quit): ")
 
+main()
 
 
 
