@@ -15,9 +15,9 @@ def write():
 
 
 # 2. read_notes(filename) - reads all notes from file
-# def read():
-#     with open ("note.txt", "r") as file:
-#          print(file.read())
+def read():
+    with open ("note.txt", "r") as file:
+         print(file.read())
 
 
 # 3. Main code - asks user to save or read
