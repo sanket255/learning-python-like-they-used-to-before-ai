@@ -18,9 +18,9 @@ def write():
 
 # # write()
 # # Read all entries (display them)
-# def read():
-#     with open ("journal.txt", "r") as file:
-#         print(file.read())
+def read():
+    with open ("journal.txt", "r") as file:
+        print(file.read())
 
 # # Search entries by keyword
 # def search():
