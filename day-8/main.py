@@ -23,12 +23,12 @@ def read():
         print(file.read())
 
 # # Search entries by keyword
-# def search():
-#     with open ("journal.txt", "r") as file:
-#         keyword=input("Search note through journal date/word of your choice")
-#         for line in file:
-#             if keyword in line:
-#                 print(line)
+def search():
+    with open ("journal.txt", "r") as file:
+        keyword=input("Search note through journal date/word of your choice")
+        for line in file:
+            if keyword in line:
+                print(line)
 
 # Delete an entry (optional, harder)
 # Loop until quit
