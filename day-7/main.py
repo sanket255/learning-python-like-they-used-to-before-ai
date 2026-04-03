@@ -26,7 +26,7 @@ def main():
     ask=0
     while ask !="quit":
         ask=input("what do you want to do with your note write(w)or save(s) / read(r) / quit the programme: ")
-        if ask =="s" or "w":
+        if ask =="s" or ask == "w":
             write()
         elif ask=="r":
             read()
