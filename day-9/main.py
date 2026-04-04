@@ -17,13 +17,15 @@ def div(num1,num2):
     return num1/num2
 
 while ask!="quit":
-    ask=input("Do you want to get a calculation done (y/quit)")
+    ask=input("Do you want to get a calculation done (y/quit): ")
     while True:
         try:
             num1=int(input("Enter number 1 that you want to oparate on: "))
+            break
         except ValueError:
             print("is not a number dont you understand what a number is what are you a foid")
-    # while True:
+            
+    while True:
         try:
             num2=int(input("Enter number 2 that you want to oparate on: "))
             if num2==0:
@@ -38,7 +40,7 @@ while ask!="quit":
     while True:
         try:
             op=(input("Enter the oparater you want (+, -, *, /): "))
-            if op in ["+", "-", "*", "/"]:
+            if op not in ["+", "-", "*", "/"]:
                 print("Invalid input try (+, -, *, /): ")
                 continue
             break
@@ -58,6 +60,7 @@ while ask!="quit":
         result=div(num1, num2)
     
     print(result)
+    ask=input("Do you want to get a calculation another done (y/quit): ")
 
 # Catch errors (division by zero, invalid operation)
 # Show result
