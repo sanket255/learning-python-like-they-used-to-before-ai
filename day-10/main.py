@@ -32,16 +32,16 @@ def q1():
 
 q1()
 
-# def q2():
-#     print("Question: How many hearts does an octopus have?")
-#     ans=input("enter you answer: ")
+def q2():
+    print("Question: How many hearts does an octopus have?")
+    ans=input("enter you answer: ")
 
-#     if ans == "three" or ans == "3":
-#         print("correct")
-#     elif ans == "three" or ans == "3":
-#         print("incorrect")
+    if ans == "three" or ans == "3":
+        print("correct")
+    elif ans == "three" or ans == "3":
+        print("incorrect")
 
-# q2()
+q2()
 
 # def q3():
 #     print("What is the only continent without an active volcano?")
