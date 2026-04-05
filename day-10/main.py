@@ -43,16 +43,16 @@ def q2():
 
 q2()
 
-# def q3():
-#     print("What is the only continent without an active volcano?")
-#     ans=input("enter you answer: ")
+def q3():
+    print("What is the only continent without an active volcano?")
+    ans=input("enter you answer: ")
 
-#     if ans == "australia":
-#         print("correct")
-#     elif ans!="australia":
-#         print("incorrect")
+    if ans == "australia":
+        print("correct")
+    elif ans!="australia":
+        print("incorrect")
 
-# q3()
+q3()
 
 # def q4():
 #     print("Question: What is the smallest country in the world?")
