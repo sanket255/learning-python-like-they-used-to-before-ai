@@ -74,5 +74,5 @@ def q5():
     elif ans!="dino":
         print("incorrect")
 
-# q5()
+q5()
 
