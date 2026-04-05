@@ -54,16 +54,16 @@ def q3():
 
 q3()
 
-# def q4():
-#     print("Question: What is the smallest country in the world?")
-#     ans=input("enter you answer: ")
+def q4():
+    print("Question: What is the smallest country in the world?")
+    ans=input("enter you answer: ")
 
-#     if ans == "the vatican":
-#         print("correct")
-#     elif ans!="the vatican":
-#         print("incorrect")
+    if ans == "the vatican":
+        print("correct")
+    elif ans!="the vatican":
+        print("incorrect")
 
-# q4()
+q4()
 
 # def q5():
 #     print("Question: What is the name of the pet dinosaur on The Flintstones?")
