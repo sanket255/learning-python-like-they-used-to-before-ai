@@ -1,20 +1,20 @@
-# import requests
-# # city=0
-# def fetchweather(city):
-#     # print("hello")
-#     url=f"https://api.weatherapi.com/v1/current.json?key=8de5549662704b358a8143323260704&q={city}"
-#     try:
-#         response=requests.get(url)
-#         data=response.json()
-#         if response.status_code==200:
-#             location=data['location']['name']   
-#             temp=data['current'] ['temp_c']
-#             humidity=data['current'] ['humidity']
-#             condition=data['current'] ['condition'] ['text']
+import requests
+# city=0
+def fetchweather(city):
+    # print("hello")
+    url=f"https://api.weatherapi.com/v1/current.json?key=8de5549662704b358a8143323260704&q={city}"
+    try:
+        response=requests.get(url)
+        data=response.json()
+        if response.status_code==200:
+            location=data['location']['name']   
+            temp=data['current'] ['temp_c']
+            humidity=data['current'] ['humidity']
+            condition=data['current'] ['condition'] ['text']
 
-#             return location,temp,condition,humidity
-#         else:
-#             print("no city found!!!")
+            return location,temp,condition,humidity
+        else:
+            print("no city found!!!")
 #     except requests.exceptions.ConnetionTimeout:
 #         print("no internet")
 #     except Exception as e:
