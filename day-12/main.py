@@ -15,10 +15,10 @@ def fetchweather(city):
             return location,temp,condition,humidity
         else:
             print("no city found!!!")
-#     except requests.exceptions.ConnetionTimeout:
-#         print("no internet")
-#     except Exception as e:
-#         print(f"the error is: {e}")
+    except requests.exceptions.ConnetionTimeout:
+        print("no internet")
+    except Exception as e:
+        print(f"the error is: {e}")
 
 
 
