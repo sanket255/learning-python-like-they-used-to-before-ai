@@ -24,16 +24,16 @@ def fetchweather(city):
 
 
 # fetchweather()
-# def main():
-    # ask=0
-    # while ask != "quit":
-        # city=input("Enter the city of your choice (or quit): ")        
-        # result=fetchweather(city)
-        # if result:
-            # location,temp,condition,humidity =result
-            # print(f"{location}: {temp}*C, {humidity}%, {condition}")
-        # ask=input("do you want to do another weather search?(y/quit): ")
-# 
+def main():
+    ask=0
+    while ask != "quit":
+        city=input("Enter the city of your choice (or quit): ")        
+        result=fetchweather(city)
+        if result:
+            location,temp,condition,humidity =result
+            print(f"{location}: {temp}*C, {humidity}%, {condition}")
+        ask=input("do you want to do another weather search?(y/quit): ")
+
 # main()
 
 
