@@ -34,7 +34,7 @@ def main():
             print(f"{location}: {temp}*C, {humidity}%, {condition}")
         ask=input("do you want to do another weather search?(y/quit): ")
 
-# main()
+main()
 
 
 
