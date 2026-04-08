@@ -10,8 +10,10 @@ def add_contacts():
     with open("contacts.txt", "a" ) as file:
         file.write(f"{name}: {number}, {email}"+ "\n")
 
-
-
+# View all contacts
+def view_contacts():
+    with open ("contacts.txt", "r" )as file:
+        print(file.read())
 
 
 
