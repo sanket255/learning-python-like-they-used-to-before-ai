@@ -16,4 +16,13 @@ def view_contacts():
         print(file.read())
 
 
+# Search contact
+def search_contacts():
+    with open ("contacts.txt","r") as file:
+        keyword=input("search by name: ")
+        for line in file:
+            if keyword in line:
+                print(line)
 
+
+                
