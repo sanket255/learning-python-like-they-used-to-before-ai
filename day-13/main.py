@@ -70,7 +70,7 @@ def main():
         if ask == "quit":
             break
 
-
+main()
 
 
 
