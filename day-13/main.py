@@ -18,11 +18,25 @@ def view_contacts():
 
 # Search contact
 def search_contacts():
+    keyword=input("search by name: ")
     with open ("contacts.txt","r") as file:
-        keyword=input("search by name: ")
         for line in file:
             if keyword in line:
                 print(line)
 
+# Delete contact
+def del_con():
+    keyword1=input("search the contact by name: ")
+    with open ("contacts.txt","r") as file:
+        lines=file.readlines()
 
+        
+        
+    with open("contacts.txt","w") as file:   
+        for line in lines:
+            if keyword1 not in line:
+                file.write(line)
                 
+
+
+
