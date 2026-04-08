@@ -1,6 +1,5 @@
 # Day 13 Task: Code Organization
 # Build a  (simple, but organized with functions):
-
 print("Contact Manager App")
 # Add contact (name, phone, email)
 def add_contacts():
@@ -12,22 +11,17 @@ def add_contacts():
         except ValueError:
             print ("Enter a number please")
             continue
-    
     email=input("Enter the E-Mail of the person (optional, leave blank if not know):")
-        
     with open("contacts.txt", "a" ) as file:
         file.write(f"{name}: {number}, {email}"+ "\n")
     print("Contact added successfully!!!")
-
 # View all contacts
-
 def view_contacts():
     try:
         with open ("contacts.txt", "r" )as file:
             print(file.read())
     except FileNotFoundError:
         print("file not found")
-
 # Search contact
 def search_contacts():
     while True:
@@ -54,7 +48,6 @@ def del_con():
                 print(f"deleted line: {line}")
             if keyword1 not in line:
                 file.write(line)
-
 def main():
     ask=0
     while ask!="quit":
@@ -69,7 +62,6 @@ def main():
             del_con()
         if ask == "quit":
             break
-
 main()
 
 
