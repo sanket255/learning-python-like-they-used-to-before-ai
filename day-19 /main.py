@@ -9,7 +9,7 @@ def inputt():
     user_m=input("Enter the movie name: ")
     while True:
         try:
-            user_r=(input(f"rate the movie {user_m}: "))
+            user_r=int(input(f"rate the movie {user_m}: "))
             break
         except ValueError:
             print("make sure the rating is a NUMBER!!")
@@ -18,17 +18,19 @@ def inputt():
     movie.append(user_m)
     rating.append(user_r)
 
-    # pair=dict(zip(user_m,user_r))
     # print(pair)
 
 # Store in file (movie: rating format)
     with open("movie.txt", "a") as file:
-        file.write((f"{movie}: {rating}")+"\n")
+        file.write((f"{user_m}: {user_r}")+"\n")
 
     with open ("movie.txt","r") as file:
-        print(f"{movie}: {rating}")
+        print(file.read())
+        
 
 # Show average rating of all movies
+# def rate():
+    # pair=dict(user_m,user_r)
     # valv=int(pair.values())
     # addi=sum(valv)
     # # print(addi)
@@ -47,11 +49,13 @@ def search():
 
 
 while ask!="quit":
-    ask=input("do you want to rate a movie  (y / search a movie you rated (a) / quit): ")
+    ask=input("( rate a movie (y) / search a movie you rated (a)/ avarage rating of all movies(b) / quit): ")
     if ask == "y":
         inputt()
     elif ask== "a":
         search()
+    # elif ask == "b":
+    #     rate()
     elif ask == "quit":
         break
 

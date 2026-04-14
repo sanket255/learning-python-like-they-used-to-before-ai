@@ -1,4 +1,6 @@
-['free guy']: ['8']['guy free']: ['9']
-['dhurandhar']: ['9']
-['bird man ']: ['10']
-['a death in gunj']: ['10']
+free guy: 8
+trijya: 9
+dhurandhar: 9
+bird man: 10
+a death in gunj: 10
+laila majnu : 10
