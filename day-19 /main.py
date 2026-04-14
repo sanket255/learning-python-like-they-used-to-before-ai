@@ -2,9 +2,10 @@
 print("Movie Rating Tracker")
 ask="0"
 # Ask user for movie name + rating (1-10)
-while ask!="quit":
+def inputt():
     movie=[]
     rating=[]
+
     user_m=input("Enter the movie name: ")
     while True:
         try:
@@ -17,11 +18,10 @@ while ask!="quit":
     movie.append(user_m)
     rating.append(user_r)
 
-    pair=dict(zip(user_m,user_r))
+    # pair=dict(zip(user_m,user_r))
     # print(pair)
 
 # Store in file (movie: rating format)
-    
     with open("movie.txt", "a") as file:
         file.write((f"{movie}: {rating}")+"\n")
 
@@ -37,6 +37,7 @@ while ask!="quit":
     # print(avg)
 
 # Search for a specific movie's rating
+def search():
     keyword=input("Enter the movie name: ")
     with open ("movie.txt", "r") as file:
         for line in file:
@@ -45,7 +46,16 @@ while ask!="quit":
 
 
 
-    ask=input("do you want another movie to rate (y/quit): ")
+while ask!="quit":
+    ask=input("do you want to rate a movie  (y / search a movie you rated (a) / quit): ")
+    if ask == "y":
+        inputt()
+    elif ask== "a":
+        search()
+    elif ask == "quit":
+        break
+
+
 
 
 
