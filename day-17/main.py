@@ -4,14 +4,17 @@ class BankAccount:
          self.balance = balance
 
     def diposit(self,diposit):
-         self.balance+=diposit
+          if diposit >= 0 :
+              print(f"invalid diposit amount, Your account balance is {self.balance}")
+          else:
+              self.balance+=diposit
 
     def withdraw(self,withdraw):
           if withdraw >= self.balance:
               print(f"cant make this transaction, withdraw is more than you current balance {self.balance}!!")
           elif withdraw <= 0:
                print(f"withdraw amount cant be 0 or less than 0. Your balance is {self.balance}")
-          elif withdraw == self.balance or withdraw < self.balance:
+          else:
               self.balance-=withdraw
 
     def info(self):
