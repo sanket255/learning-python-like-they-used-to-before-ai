@@ -1,0 +1,3 @@
+
+16/04/2026: learned OOP today.
+16/04/2026: understood how __init__ function works
