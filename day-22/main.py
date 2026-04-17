@@ -10,6 +10,14 @@ while True:
         data[category].append (note)
     else:
         data[category] = [note]
+    cat=input("Enter category to view: ")
+    
+    if cat in data:
+                print(data[cat])
+    else:print("not found!!")
+
+
+
 
 
 
