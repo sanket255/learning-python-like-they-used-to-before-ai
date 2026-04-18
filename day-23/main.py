@@ -22,3 +22,16 @@ class TaskManager:
 
     def show_all(self):
         print(self.data)
+
+
+    def del_task(self):
+        key=input("Enter the catogory: ")
+        if key in self.data:
+            value=input("enter the task you want to delete: ")
+            if value in self.data[key]:
+                self.data[key].remove(value)
+
+        if len(self.data[key]) == 0:
+            # self.data
+            del self.data[key]
+            print(self.data)
