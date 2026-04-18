@@ -25,11 +25,15 @@ class TaskManager:
 
 
     def del_task(self):
-        key=input("Enter the catogory: ")
+        key=input("Enter the category to delete from: ")
         if key in self.data:
             value=input("enter the task you want to delete: ")
             if value in self.data[key]:
                 self.data[key].remove(value)
+            else:
+                print(f"{value} doesn't exist in  {key}!!")
+        else:
+            print(f"{key} not found!!")
 
         if len(self.data[key]) == 0:
             # self.data
@@ -41,14 +45,17 @@ class TaskManager:
 
 tm = TaskManager()
 while True:
-    a=input("Enter catagory(study(s) / work(w) / random(r) /quit ): ")
-    if a=="quit":
+    category=input("Enter catagory(study(s) / work(w) / random(r) /quit ): ")
+    if category=="quit":
         break
-    b=input("Add task: ")
-    tm.add_task(a,b)
-    
-    tm.view_task()
-    tm.show_all()
-
-
-tm.del_task()
+    task=input("Add task: ")
+    tm.add_task(category,task)
+    view=input("Do you want to check the list (y/n): ")
+    if view=="y":
+        tm.view_task()
+    show=input("want to check all the tasks(y/n): ")
+    if show == "y":
+        tm.show_all()
+    dele=input("do you want to delete something (y/n): ")
+    if dele=="y":
+        tm.del_task()
