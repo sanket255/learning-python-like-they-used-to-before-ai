@@ -1,5 +1,3 @@
-# print("task manager!!")
-
 class TaskManager:
     def __init__(self):
         print("task manager")
@@ -15,7 +13,6 @@ class TaskManager:
             self.data[category] = [task]
 
     def view_task(self):
-        # data={}
         cat=input("Enter the category: ")
         if cat in self.data:
             print(self.data[cat])
@@ -27,19 +24,28 @@ class TaskManager:
     def del_task(self):
         key=input("Enter the category to delete from: ")
         if key in self.data:
+            print(self.data[key])
+
+
             value=input("enter the task you want to delete: ")
             if value in self.data[key]:
                 self.data[key].remove(value)
+
+
+                if len(self.data[key]) == 0:
+                    del self.data[key]
+                    print(self.data)
+
+                else:
+                    print("it does not exist!!")
+
             else:
                 print(f"{value} doesn't exist in  {key}!!")
+
         else:
             print(f"{key} not found!!")
 
-        if len(self.data[key]) == 0:
-            # self.data
-            del self.data[key]
-            print(self.data)
-            
+
 
 
 
