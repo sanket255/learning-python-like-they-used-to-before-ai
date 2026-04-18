@@ -35,3 +35,20 @@ class TaskManager:
             # self.data
             del self.data[key]
             print(self.data)
+            
+
+
+
+tm = TaskManager()
+while True:
+    a=input("Enter catagory(study(s) / work(w) / random(r) /quit ): ")
+    if a=="quit":
+        break
+    b=input("Add task: ")
+    tm.add_task(a,b)
+    
+    tm.view_task()
+    tm.show_all()
+
+
+tm.del_task()
