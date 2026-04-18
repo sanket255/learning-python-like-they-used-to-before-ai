@@ -37,7 +37,8 @@ class NoteBook:
         try:
             with open ("notebook.json", "r") as file:
                 data=(json.load(file))
-            for date in data
+            for date in data:
+                print("hi")
 
         except FileNotFoundError:
             print("File doesnt exist!!!")
