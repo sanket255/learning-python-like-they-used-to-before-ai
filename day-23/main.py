@@ -13,3 +13,12 @@ class TaskManager:
             self.data[category].append(task)
         else:
             self.data[category] = [task]
+
+    def view_task(self):
+        # data={}
+        cat=input("Enter the category: ")
+        if cat in self.data:
+            print(self.data[cat])
+
+    def show_all(self):
+        print(self.data)
