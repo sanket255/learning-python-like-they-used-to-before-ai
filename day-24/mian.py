@@ -27,5 +27,25 @@ class Library:
         #     (self.shelf).append(title)
         elif title in self.borrow:
             (self.borrow).remove(title) and (self.shelf).append(title)
+            
+            
+lib=Library()
+while True:
+    book = input("add book ( add book name / quit ):")
+    if book=="quit":
+        break
+    lib.add_book(book)
+
+while True:
+    check=input("what operation you have to do (borrow book(b)/ return book(r) / quit ) : ")
+
+    if check == "quit":
+        break
+    
+    elif check == "b":
+        lib.borrow_book(input("Enter the book name you want to borrow: "))
+    
+    elif check == "r":
+        lib.return_book(input("enter the book name you want to return: "))
     
 
