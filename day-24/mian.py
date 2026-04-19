@@ -16,7 +16,8 @@ class Library:
             print(f"{title} this book is already borrowed")
             print(f"{self.shelf} here are other options we have")            
         elif title in self.shelf:
-            (self.shelf).remove(title) and (self.borrow).append(title)
+            (self.shelf).remove(title) 
+            (self.borrow).append(title)
             print(self.borrow)
 
     def return_book(self,title):
@@ -26,7 +27,8 @@ class Library:
         # elif title not in self.shelf:
         #     (self.shelf).append(title)
         elif title in self.borrow:
-            (self.borrow).remove(title) and (self.shelf).append(title)
+            (self.borrow).remove(title)
+            (self.shelf).append(title)
             
             
 lib=Library()
