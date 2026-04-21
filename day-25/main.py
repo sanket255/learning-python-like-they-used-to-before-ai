@@ -9,15 +9,17 @@ class StudentGradeSys:
 
     def show_students(self,student):
         if student in self.data:
-            print(self.data)
+            print(self.data[student])
         
     def avg(self, student):
-        student
+        a = self.data[student]
+        b = sum(a)
+        c= b / len(a)
+        print(c)
 
 
-sgs = StudentGradeSys()
-a = "sanket"
-b = 90
 
-sgs.add_grade(a,b)
-sgs.show_students(a,b)
+
+
+
+
