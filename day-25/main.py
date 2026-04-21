@@ -37,7 +37,24 @@ class StudentGradeSys:
 
 
 sgs = StudentGradeSys()
+while True:
+    a = input("Enter the student name (or quit): ")
+    if a == "quit":
+        break
+    while True:
+        try:
+            b = int(input("Enter the marks: "))
+            break
+        except TypeError:
+            print ("try a number")
+            continue
 
+while True:
+    ask = input  
+    sgs.add_grade(a,b)
+    sgs.show_students(a)
+    sgs.avg(a)
+    sgs.top(a)
 
 
 
