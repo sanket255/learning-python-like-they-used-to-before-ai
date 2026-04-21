@@ -31,10 +31,12 @@ class StudentGradeSys:
                 best_student = student
         
         print (f"{best_student}: {best_avg} ")
+        print(self.data)
+        
             
 
 
-
+sgs = StudentGradeSys()
 
 
 
