@@ -48,13 +48,19 @@ while True:
         except TypeError:
             print ("try a number")
             continue
-
-while True:
-    ask = input  
+    
     sgs.add_grade(a,b)
     sgs.show_students(a)
     sgs.avg(a)
     sgs.top(a)
+
+
+# while True:
+#     ask = input  
+#     sgs.add_grade(a,b)
+#     sgs.show_students(a)
+#     sgs.avg(a)
+#     sgs.top(a)
 
 
 
