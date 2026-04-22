@@ -17,28 +17,29 @@ class TaskManager:
     def __init__(self):
         self.data = {}
     def save_in_dict (self,name,task):
-        if self.data[name] in task:
-            self.data[name].append(task)
+        if name in self.data:
+            self.data[name].add_task(task)
         else:
-            self.data[name] = [task]
-    def show_dict(self , name , task):
+            existing_people = User(name)
+            existing_people.add_task(task)
+            self.data[name] = existing_people
+
+    def show_dict(self,name,task):
         print(f"{name}: {task}")
+        print(self.data)
 
 
-
+rt= TaskManager()
 while True:
     name = input("Enter name (or quit) : ")
     if name == "quit":
         break
-    usr = User(name)
-    rt= TaskManager()
+    # usr = User(name)
     task = input("Enter  task (or quit): ")
     if task == "quit":
         break
-    usr.add_task(task)
-    usr.show()
     rt.save_in_dict(name , task)    
-    rt.show_dict(name , task )
+    rt.show_dict(name , task)
 
 
 
