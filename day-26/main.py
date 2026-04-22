@@ -26,7 +26,19 @@ class TaskManager:
 
 
 
-
+while True:
+    name = input("Enter name (or quit) : ")
+    if name == "quit":
+        break
+    usr = User(name)
+    rt= TaskManager()
+    task = input("Enter  task (or quit): ")
+    if task == "quit":
+        break
+    usr.add_task(task)
+    usr.show()
+    rt.save_in_dict(name , task)    
+    rt.show_dict(name , task )
 
 
 
