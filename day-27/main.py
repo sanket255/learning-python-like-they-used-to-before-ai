@@ -25,3 +25,17 @@ while True:
             print ("either of them is not a number, try a number(1,2,3,4,....): ")
             continue
     opre = input("Enter the oparation ( +, - , * , / ) :")
+
+    if opre == "+":
+        result = calc.add(num1,num2)
+    elif opre == "-":
+        result = calc.sub(num1,num2)
+    elif opre == "*":
+        result = calc.mul(num1,num2)
+    elif opre == "/":
+        result = calc.div(num1,num2)
+
+    print(result)
+    ask = input("do you want another calc or (quit)?: ")
+    if ask == "quit":
+        break
