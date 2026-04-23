@@ -12,3 +12,16 @@ class Calculator:
             return a/b
     
 
+calc = Calculator()
+
+while True:
+    while True:
+        try:
+            num1 = int(input("Enter number 1: "))
+            num2 = int(input("Enter number 2: "))
+                
+            break
+        except ValueError:
+            print ("either of them is not a number, try a number(1,2,3,4,....): ")
+            continue
+    opre = input("Enter the oparation ( +, - , * , / ) :")
