@@ -8,3 +8,7 @@ class ContactBook:
         else:
             self.data[name] = contact
         # return self.data
+    def get_data(self,name):
+        if name in self.data:
+            return self.data[name]
+
