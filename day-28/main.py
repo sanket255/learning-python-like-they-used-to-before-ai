@@ -12,3 +12,7 @@ class ContactBook:
         if name in self.data:
             return self.data[name]
 
+    def show_all (self):
+        return self.data
+
+
