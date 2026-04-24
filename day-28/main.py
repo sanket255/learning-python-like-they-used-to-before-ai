@@ -15,4 +15,18 @@ class ContactBook:
     def show_all (self):
         return self.data
 
-
+    def del_name (self, key , value):
+        if key in self.data:
+            print(self.data[key])
+            if value in self.data[key]:
+                self.data[key].remove(value)
+                if len(self.data[key]) == 0:
+                    del self.data[key]
+                    print(self.data)
+                else:
+                    print("it does not exist!!")
+            else:
+                print(f"{value} doesn't exist in  {key}!!")
+        else:
+            print(f"{key} not found!!")
+        
