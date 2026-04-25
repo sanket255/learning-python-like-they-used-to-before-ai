@@ -18,3 +18,9 @@ class PassGen:
             
             
         return ret
+
+
+pg = PassGen()
+a = int(input("enter a number:"))
+result = pg.generator(a)
+print (result)
