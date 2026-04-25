@@ -12,4 +12,9 @@ class PassGen:
 
         pas = letter + number + punct
 
- 
+        ret = ""
+        for i in range(length):
+            ret = ret + random.choice(pas)
+            
+            
+        return ret
