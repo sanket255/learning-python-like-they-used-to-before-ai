@@ -15,20 +15,20 @@ class ContactBook:
     def show_all (self):
         return self.data
 
-    def del_name (self, key , value):
-        if key in self.data:
-            print(self.data[key])
-            if value in self.data[key]:
-                self.data[key].remove(value)
-                if len(self.data[key]) == 0:
-                    del self.data[key]
+    def del_name (self, name , contact):
+        if name in self.data:
+            print(self.data[name])
+            if contact in self.data[name]:
+                self.data[name].remove(contact)
+                if len(self.data[name]) == 0:
+                    del self.data[name]
                     print(self.data)
                 else:
                     print("it does not exist!!")
             else:
-                print(f"{value} doesn't exist in  {key}!!")
+                print(f"{contact} doesn't exist in  {name}!!")
         else:
-            print(f"{key} not found!!")
+            print(f"{name} not found!!")
         
 
         
@@ -38,9 +38,32 @@ class ContactBook:
 
 
 cc = ContactBook()
+while True:
+    name = input("Enter name: ")
+    contact = input("Enter contact number: ")
+    
+    result = cc.add_name(name, contact)
+    
+    search = input("enter the name of the contact you want number for (or quit): ")
+    
+    if search != "quit":
+        result = cc.get_data(search)
+    elif search == "quit":
+        break
 
-result = cc.add_name("ame",28972)
-result1 = cc.get_data("ame")
+    all = input("do you want to see whole contact list? (y/quit) : ")
+    
+    if all != "quit":
+        result = cc.show_all()
+    elif all == "quit":
+        break
 
-print (result)
-print (result1)
+    delete = input("enter the name you want to delete (or quit) : ")
+    if delete == "quit":
+        break
+    delete_num = input("Enter the number: ")
+    result = cc.del_name(delete,delete_num)
+
+    print(result)
+    
+    # elif delete!="quit":
