@@ -37,3 +37,10 @@ class ContactBook:
         
 
 
+cc = ContactBook()
+
+result = cc.add_name("ame",28972)
+result1 = cc.get_data("ame")
+
+print (result)
+print (result1)
