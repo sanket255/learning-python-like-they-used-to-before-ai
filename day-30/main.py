@@ -12,6 +12,7 @@ import random
 class Game:
     def __init__(self):
         self.secrate = random.randint( 1 , 100 ) 
+    
     def guess (self, number):
         if number > self.secrate:
             return "too high"
@@ -20,6 +21,16 @@ class Game:
         if number == self.secrate:
             return "correct!"
 
+        
+
+gm = Game()
+while True:
+    number = int(input("Enter your guess number: "))
+    result = gm.guess(number)
+    print (result)
+
+    if result == "correct!":
+        break
 
 
 
