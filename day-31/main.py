@@ -20,6 +20,8 @@ class FileReader:
             for lines in file:
                 if keyword in lines.lower() :
                     all_lines.append(lines.strip())
+                elif keyword not in lines:
+                    return "result not found!!!"
 
         return all_lines
                 
@@ -46,19 +48,11 @@ while True:
     
     if filename == "quit":
         break
-    while True:
-            try:
-                file = fr.read_files(filename)
-                print(file)
-                break
-            except FileNotFoundError:
-                print("this file does not exist in our database!")
-                continue
-                
-    if filename == "lookin":
+    ask = input("Do you want to look our file's database (y/n): ")
+    if filename == "lookin" or ask == "y":
         result = fr.show_list()
         for i, result in enumerate(result):
-            print(f"{i}: {result - 1}")
+            print(f"{i}: {result}")
 
 
 
@@ -68,9 +62,21 @@ while True:
         keyword = input("search by keyword: ")
         search = fr.search( filename, keyword )
         print(search)
+
     
     elif ask == "quit":
         break
+    else:
+        while True:
+                try:
+                    file = fr.read_files(filename)
+                    print(file)
+                    break
+                except FileNotFoundError:
+                    print("this file does not exist in our database!")
+                    continue
+        
+        
 
         
 
