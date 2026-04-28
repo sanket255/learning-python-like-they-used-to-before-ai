@@ -31,30 +31,37 @@ class FileReader:
 
 fr = FileReader()
 
+print("INSTRUCTIONS!!")
+print("1. dont add '.txt' suffix we have that in our programme.")
+print("2. once you choose file at beginning thats the file \n youre doing operations on until \n you quit and start over with different file.")
+print("3. we suggest to look our file database before choosing \n file that way you dont mess up \n the name up your file")
+print("4. while searching by keyword we suggest to enter the \n keyword in all lower case so you dont miss any content \n  at all from the file it self")
+
+
+
+
 while True:
     
-    filename = input("Enter the filename(Enter name of the file to read)  / (or quit ): ")
+    filename = input("Enter the filename(Enter name of the file to read)/\n look in our file database (lookin) /\n (or quit ): ")
     
     if filename == "quit":
         break
-    
-    else:
-        while True:
-                try:
-                    file = fr.read_files(filename)
-                    print(file)
-                    break
-                except FileNotFoundError:
-                    print("this file does not exist in our database!")
-                    continue
-    
-
-
-    ask = input("look into the files we have? ( y / quit ): ")
-    if ask == "y":
+    while True:
+            try:
+                file = fr.read_files(filename)
+                print(file)
+                break
+            except FileNotFoundError:
+                print("this file does not exist in our database!")
+                continue
+                
+    if filename == "lookin":
         result = fr.show_list()
         for i, result in enumerate(result):
             print(f"{i}: {result - 1}")
+
+
+
 
     ask = input("do you want to search through file? ( y / quit ): ")
     if ask == "y":
