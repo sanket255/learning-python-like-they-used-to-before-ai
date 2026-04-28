@@ -13,3 +13,18 @@ class FileReader:
         return os.listdir(folder)
 
         
+    def search(self,filename, keyword):
+        with open (f"{filename}.txt", "r") as file:
+            all_lines = []
+            for lines in file:
+                if keyword in lines.lower() :
+                    all_lines.append(lines.strip())
+
+        return all_lines
+                
+
+
+
+
+
+
