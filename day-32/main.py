@@ -28,6 +28,9 @@ class FileSearch:
     
         return final_result
 
+fs = FileSearch()
+
+
 
 
 
