@@ -15,6 +15,18 @@ class FileSearch:
 
             return match
     
+    def search_infolder(self,keyword):
+        final_result = {}
+    
+        folder = "/home/scar/learnpy/day-32"
+        files = os.listdir(folder)
+    
+        for f in files:
+            if f.endswith(".txt"):
+                result = self.search_infile(f,keyword)
+                final_result[f] = result
+    
+        return final_result
 
 
 
